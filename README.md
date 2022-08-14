@@ -9,7 +9,7 @@ In this project, I will be using machine learning and neural networks to create 
 
 - Data Preprocessing
     1. The target for the model is: IS_SUCCESSFUL.
-    2. The features for the model are: APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, USE_CASE, OGANIZATION, STATUS, INCOME_AMT, SPECIAL_CONSIDERATION, ASK_AMT.
+    2. The features for the model are: APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT, SPECIAL_CONSIDERATION, ASK_AMT.
     3. Input data removed from the input were: EIN and NAME.
     
 - Compiling, Training, and Evaluating the Model
@@ -30,19 +30,18 @@ In this project, I will be using machine learning and neural networks to create 
         - The performance was 72.8%
         - I also ran it through an automated optimizer, the kerastuner, which search for best hyperparameters. 
         - The performance was 73.3%
-        
+
+method 1 (2 layers) performance: 73.0%
+![model_1_eval.png](images/model_1_eval.png)
+![model_1.png](images/model_1.png)
+
+method 2 (3 layers) performance: 72.8%
+![optimize_eval.png](images/optimize_eval.png)
+![optimize_model.png](images/optimize_model.png)
+
+method 3 (kerastuner) performance: 73.3%
+![keras_tuner_eval.png](images/keras_tuner_eval.png)
+
 # Summary: 
 
-method 1 performance: 73.0%
-
-![model_1.png](images/model_1.png)
-![model_1_eval.png](images/model_1_eval.png)
-
-method 2 performance: 72.8%
-!optimize_model
-!optimize_eval
-
-method 3 performance: 73.3%
-!!kera_tuner_eval
-
-The performance of the above three methods were: 73.0%, 72.8%, and 73.3%. I was not able to achieve above 75% accuracy.  Since the dataset is a tabular data, I recommend RandomForest because structually, it is similar to neural network, it combines multiple smaller models into a more accurate one.
+The performances of the above three methods were: 73.0%, 72.8%, and 73.3%. I was not able to achieve a performance above 75% accuracy.  However, another method I would recommend is RandomForest.  Structurally, it is similar to the neural network and is for tabular data, which is the dataset in this case.  
