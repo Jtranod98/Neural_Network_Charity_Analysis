@@ -3,7 +3,7 @@ Neural Networks and Deep Learning Models
 
 # Overview 
 
-In this project, I will create a binary classifier that predicts whether applicants will be successful if funded by Alphabet Soup, using machine learning and neural networks. The dataset is a CSV containing more than 34,000 organizations that have received funding from Alphabet Soup over the years. 
+In this project, I will be using machine learning and neural networks to create a binary classifier that predicts whether applicants will be successful if funded by Alphabet Soup.  The dataset is a CSV containing more than 34,000 organizations that have received funding from Alphabet Soup over the years. 
 
 # Results:
 
@@ -32,9 +32,17 @@ In this project, I will create a binary classifier that predicts whether applica
         - The performance was 73.3%
         
 # Summary: 
-- Summarize the overall results of the deep learning model(2 pt)
 
-method 1 performance:
-method 2 performance:
-method 3 performance:
-The performances of all three trials were: 73.05, 72.8%, and 73.3%.  I was not able to achieve above 75%.  However, I recommend RandomForest instead of neural network because the dataset is tabular data. 
+method 1 performance: 73.0%
+
+![model_1.png](images/model_1.png)
+![model_1_eval.png](images/model_1_eval.png)
+
+method 2 performance: 72.8%
+!optimize_model
+!optimize_eval
+
+method 3 performance: 73.3%
+!!kera_tuner_eval
+
+The performance of the above three methods were: 73.0%, 72.8%, and 73.3%. I was not able to achieve above 75% accuracy.  Since the dataset is a tabular data, I recommend RandomForest because structually, it is similar to neural network, it combines multiple smaller models into a more accurate one.
